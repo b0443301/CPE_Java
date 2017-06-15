@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class main {
+	public static void main(String arg[]){
+		  //init
+			int input=0;
+			 for (int i = 1; i <499; i++) { 
+		            input = i;
+		        }
+			int[] x; 
+			x = new int[input];
+			 for (int i = 1; i < 2999; i++) { 
+		            x[input] = i;
+		        }
+			Scanner scanner = new Scanner(System.in);
+			//read
+			input = scanner.nextInt();
+			x[input]= scanner.nextInt();
+			//calc
+			for(int i=;i<=input;i++){
+				
+				System.out.println(sum);
+				}
+			
+
+}

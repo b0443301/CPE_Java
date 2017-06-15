@@ -1,0 +1,15 @@
+
+public class main {
+	public static void main(String args[]){
+		//init
+		int numb1=0,numb2=0;
+		Scanner scanner = new Scanner();
+		while(scanner.hasNextInt()){
+			
+			
+			
+			
+		}
+	}
+
+}

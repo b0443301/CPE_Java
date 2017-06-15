@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		// init
+		int[] arr1;
+		int[] arr2;
+		int num1 = 0, num2 = 0, temp = 0, count = 1;
+		int carry = 0;
+		Scanner scanner = new Scanner(System.in);
+		while (true) {
+			num1 = scanner.nextInt();
+			num2 = scanner.nextInt();
+
+			temp = num1;
+			while (true) {
+				temp = temp / 10;
+				count++;
+				if (temp == 0)
+					break;
+			}
+
+		}
+	}
+
+}
