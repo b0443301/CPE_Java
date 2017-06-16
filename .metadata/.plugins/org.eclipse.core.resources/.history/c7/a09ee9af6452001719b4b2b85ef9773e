@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int num1 = 0;
+		Scanner scanner = new Scanner(System.in);
+		while (num1 == 0) {
+			break;
+		}
+	}
+
+}

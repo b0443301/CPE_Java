@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int num1 = 0, count = 0;
+		int arr[];
+		ArrayList<Integer> array = new ArrayList<Integer>();//初始化一個Array List
+		Scanner scanner = new Scanner(System.in);
+		while (num1 == 0) {
+			break;
+		}
+
+		while (true) {
+			Byte input = scanner.nextByte();
+			if (input == '\n')
+				break;
+			array.add(input - '0');
+		}
+		
+		num1 = scanner.nextInt();
+		int temp = num1;
+		while (true) {
+			temp = temp / 10;
+			count++;
+			if (temp == 0)
+				break;
+		}
+
+		arr = new int[count];
+		for (int i = 0; i < count; i++) {
+			arr[i] = num1 % 10;
+			num1 = num1 / 10;
+			if (arr[i] % 2 == 0)
+				arr[i] += arr[i];
+			if (arr[i] % 2 == 0)
+				arr[i] += arr[i];
+			if (arr[i] - arr[i] == 0)
+				System.out.println(num1 + "is a multiple of 11");
+			else
+				System.out.println(num1 + "is not a multiple of 11");
+		}
+
+	}
+
+}

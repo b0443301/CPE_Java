@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int count = 0, sum1 = 0, sum2 = 0;
+		// int arr[];//給定一個大小
+		String input = "";
+		ArrayList<Integer> array = new ArrayList<Integer>();// 初始化一個無窮Array List
+		Scanner scanner = new Scanner(System.in);
+
+		// read
+		while (true) {
+			Byte input = scanner.();
+			if (input == '\n')
+				break;
+			else
+				array.add(input - '0');// 不是\n就加進來數字(用ASCII碼表示)
+		}
+
+		// cal
+		for (int i = 0; i < array.size(); i++) {
+			if (i % 2 == 0)
+				sum1 += array.get(i);
+			else
+				sum2 += array.get(i);
+		}
+
+		if (sum2 > sum1) {
+			int ans = sum2 - sum1;
+			if(ans % 11==0)
+				System.out.println(array + "is a multiple of 11");
+		} else {
+			int ans = sum1 - sum2;
+			System.out.println(array + "is a multiple of 11");
+		}
+
+		// 
+		// else
+		// System.out.println(num1 + "is not a multiple of 11");
+
+	}
+
+}
