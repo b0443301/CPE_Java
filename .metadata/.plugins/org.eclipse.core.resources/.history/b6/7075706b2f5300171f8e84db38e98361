@@ -1,0 +1,39 @@
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+public class main {
+	public static void main(String args[]) {
+		int input = 0;
+
+		Scanner scanner = new Scanner(System.in);
+
+		input = scanner.nextInt();
+		System.out.print(input);
+
+		String[] countryname = new String[input];
+		for (int i = 0; i < input; i++) {
+			countryname[i] = scanner.nextLine();
+			countryname = countryname[i].split(" ");
+			for (String e : countryname) {
+				System.out.println(e);
+			}
+		}
+		int count = 0;
+		TreeMap<Integer, String[]> treeMap = new TreeMap<Integer, String[]>();
+		treeMap.put(input, countryname);
+		while (true) {
+			if (treeMap.containsKey(input)) {
+				count++;
+				break;
+			} else {
+				count = 1;
+				count++;
+				break;
+			}
+			System.out.println(count);
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String arg[]) {
+		long input = 0;
+		int base[] = { 10000000, 100000, 1000, 100, 1 };
+		String arr[] = { "kuti", "lakh", "hajar", "shata" , "" };
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLong()) {
+			input = scanner.nextLong();
+			for (int i = 0; i < 5; i++) {
+				long ans = input / base[i];
+				if (ans != 0)
+					System.out.print(ans + " " + arr[i] + " ");
+				else if (i == 3)// 最後一次才印出0,其他次就不印了
+					System.out.print(ans);
+				input = input % base[i];
+			}
+		}
+	}
+}

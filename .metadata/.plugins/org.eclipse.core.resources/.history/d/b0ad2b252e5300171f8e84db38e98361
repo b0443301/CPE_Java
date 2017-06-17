@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int input=0,run=0;
+		String[] countryname ;
+		
+		
+		Scanner scanner= new Scanner(System.in);
+		input = scanner.nextInt();
+		for (int i = 0; i < input; i++) {
+			countryname=new String[i] ;
+			}
+		
+		
+		
+		
+		
+	}
+}

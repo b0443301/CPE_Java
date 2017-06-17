@@ -1,0 +1,30 @@
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+public class main {
+	public static void main(String args[]) {
+		TreeMap<String, Integer> treeMap = new TreeMap<String, Integer>();
+		Scanner scanner = new Scanner(System.in);
+
+		int run = Integer.parseInt(scanner.nextLine());// 整行讀進來,避免接下來讀入會出錯
+
+		for (int i = 0; i < run; i++) {// run是測資,
+			String input = scanner.nextLine();// 讀進來直到讀到\n為止,存給字串輸出(input)EX:SpainDonnaElvira
+			String[] inputSplit = input.split(" ");//把讀進來的字串作用空白做分割,存到inputSplitEX:Spain Donna Elvira
+
+			if (treeMap.containsKey(inputSplit[0])) {  // 判斷是否有某一筆資料 
+				int value = treeMap.get(inputSplit[0]);//取出第一個值EX:Spain
+				treeMap.replace(inputSplit[0], value + 1);//換成(國家名,次數加一)
+			} else {
+				treeMap.put(inputSplit[0], 1);//換成(國家名,次數加一)
+			}
+		}
+
+		for (Map.Entry<String, Integer> map : treeMap.entrySet()) {
+			System.out.println(String.valueOf(map.getKey()) + " " + String.valueOf(map.getValue()));
+		}
+
+		scanner.close();
+	}
+}

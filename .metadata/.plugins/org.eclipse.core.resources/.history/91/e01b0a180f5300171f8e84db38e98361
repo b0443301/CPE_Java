@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String arg[]) {
+		int base[] = { 10000000, 100000, 1000, 100, 1 };
+		String arr[] = { "kuti", "lakh", "hajar", "shata", "" };
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLong()) {// 連續讀入下一個型態long
+			long input = scanner.nextLong();
+			if (input / (base[0] * base[3]) > 0) {
+				long temp = input / base[0];
+				for (int i = 0; i < base.length - 1; i++) {
+					long ans = temp / base[i];
+					if (ans != 0)
+						System.out.print(ans + " " + arr[i] + " ");
+					temp = temp % base[i];
+				}
+				input = input % (base[0] * base[3]);
+			}
+			for (int i = 0; i < base.length; i++) {
+				long ans = input / base[i];
+				if (ans != 0)
+					System.out.print(ans + " " + arr[i] + " ");
+				else if (i == base.length - 1)// 最後一次才印出0,其他次就不印了
+					System.out.print(ans);
+				input = input % base[i];
+			}
+		}
+	}
+}

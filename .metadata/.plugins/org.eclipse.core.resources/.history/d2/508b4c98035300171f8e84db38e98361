@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String arg[]) {
+		// init
+		Scanner scanner = new Scanner(System.in);
+		int[] arr1 = { 100000, 1000, 100, 1 };
+		String[] arr2 = { "lakh", "hajar", "shata", "" };
+		int[] mod = { 100, 100, 10, 100 };
+
+	}
+}

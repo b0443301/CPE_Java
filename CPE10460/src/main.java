@@ -7,7 +7,7 @@ public class main {
 		// ArrayList<Integer> array = new ArrayList<Integer>();// 初始化一個無窮Array
 		Scanner scanner = new Scanner(System.in);
 
-		while (true) {
+		while (true) {//一直重複做讀,計算,輸出
 			int count = 0, sum1 = 0, sum2 = 0, ans = 0;
 			String input = "";//string是一種arraylist裡面是存char的概念
 
