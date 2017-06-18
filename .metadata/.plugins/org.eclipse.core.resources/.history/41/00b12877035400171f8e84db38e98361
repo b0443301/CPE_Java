@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		// init
+
+		Scanner scanner = new Scanner(System.in);
+		while (true) {
+			int[] arr1;//最好把變數寫為區域變數,初始化,才不會每次都要把變數清乾淨
+			int[] arr2;
+			int num1 = 0, num2 = 0, temp = 0, count1 = 0, count2 = 0, countmin = 0;
+			int carry = 0;
+
+			num1 = scanner.nextInt();
+			num2 = scanner.nextInt();
+
+			if (num1 == 0 && num2 == 0) {
+				break;
+			}
+
+			temp = num1;//把正本(num1)作備份,把正本存給副本,拿副本(temp)來做運算,因為副本只會做一次接下來就用不到了
+			while (true) {// 判斷第一個數有幾位數,因為不知道總共有幾位數
+				temp = temp / 10;
+				count1++;
+				if (temp == 0)
+					break;
+			}
+			temp = num2;
+			while (true) {// 判斷第二個數有幾位數
+				temp = temp / 10;
+				count2++;
+				if (temp == 0)
+					break;
+			}
+
+			arr1 = new int[count1];// 第一個數各別取出百位數、十位數、個位數
+			for (int i = 0; i < count1; i++) {
+				arr1[i] = num1 % 10;
+				num1 = num1 / 10;//再把正本做運算,因為接下來副本就用不到了
+			}
+			arr2 = new int[count2];
+			for (int i = 0; i < count2; i++) {
+				arr2[i] = num2 % 10;
+				num2 = num2 / 10;
+			}
+
+			if (count1 > count2)// 相加時以比較小的數為主,不是count2
+				countmin = count2;
+			else
+				countmin = count1;// 就是count1
+
+			// for(int i=0; i<arr1.length; i++)//跑全部人的次數
+			// arr1[arr1.length-1]++;//取最後一位(因為是陣列)
+
+			for (int i = 0; i < countmin; i++) {// countmin在這裡表達最小數的位數
+				arr1[i] += arr2[i];
+				if (arr1[i] >= 10) {
+					carry++;
+					if (i == countmin - 1) {// 判斷最後一位的進位(相對的for迴圈的countmin概念)
+						if (count1 > count2) {// 如果第一個數大於第二個數 EX:1234 456
+							if (arr1[countmin] == 9) {// 最後一位的下一位等於9的話(相對的if的countmin概念)
+								carry++;// 進位一次
+							}
+						} else if (count2 > count1) {// 如果第二個數大於第一個數 EX:995 1456
+							if (arr2[countmin] == 9) {// 最後一位的下一位等於9的話(相對的if的countmin概念)
+								carry++;// 進位一次
+							}
+						}
+					}
+				}
+			}
+
+			// if (arr1[count1 + 1] == 9)
+			// if (carry > 1)
+			// System.out.print(carry + "carry operation");
+			// if (carry == 1)
+			// System.out.print(carry + "carry operation");
+
+			// if (count1 > count2)
+			// count1 = count2;
+			//
+			// for (int i = 0; i < count1; i++) {
+			// arr1[i] += arr2[i];
+			// if (arr1[i] >= 10) {
+			// arr1[i] -= 10;
+			// carry++;
+			// arr1[i + 1]++;
+			//
+			// }
+			// }
+			if (carry == 1) {
+				System.out.println(carry + " carry opration");
+			} else if (carry == 0) {
+				System.out.println("No carry opration");
+			} else {
+				System.out.println(carry + " carry oprations");
+			}
+		}
+	}
+}

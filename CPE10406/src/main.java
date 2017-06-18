@@ -6,7 +6,7 @@ public class main {
 		// init
 		int run = 0, count = 0, temp = 0;
 		int[] x;
-
+		
 		Scanner scanner = new Scanner(System.in);
 
 		// read
@@ -20,7 +20,7 @@ public class main {
 			}
 			for (int k = 0; k < count; k++) {//選擇排序由大排到小
 				for (int l = k + 1; l < count; l++) {
-					if (x[l] > x[k]) {
+					if (x[l] > x[k]) {//目前讀到的數字>之前讀到的數字,則交換
 						temp = x[l];
 						x[l] = x[k];
 						x[k] = temp;
@@ -30,7 +30,7 @@ public class main {
 			}
 
 			
-			System.out.println(x[count / 2]);
+			System.out.println(x[count / 2]);//輸出中間的位數,因為不會四捨五入
 			
 		}
 	}

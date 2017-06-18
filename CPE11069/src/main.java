@@ -10,7 +10,7 @@ public class main {
 			int run = scanner.nextInt();
 			int mod = scanner.nextInt();
 
-			if (run == 0 && mod == 0) {
+			if (run == 0 && mod == 0) {//代戈蛤家计常琌0杠块0
 				System.out.println("0" + " " + "0");
 				break;
 			}

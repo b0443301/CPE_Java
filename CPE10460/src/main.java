@@ -20,14 +20,14 @@ public class main {
 			for (int i = 0; i < input.length(); i++) {//把string用陣列的方式,一個一個讀入
 				if (i % 2 == 0)
 					sum1 += input.charAt(i) - '0';//java存的陣列模式(算偶位數合)string轉成數字ascii
-				else
+				else							//charAt(i)取出字串裡的第i的位置的char的字元
 					sum2 += input.charAt(i) - '0';//java存的陣列模式(算奇位數合)
 			}
 
 			ans = Math.abs(sum2 - sum1);//這樣不用在比sum2跟sum1大小,直接相減
 			if (ans % 11 == 0) {
 				System.out.println(input + " is a multiple of 11");
-			}else{
+			}else{//不然就是另一種狀況,餘數不為0時
 				System.out.println(input + " is not a multiple of 11");
 			}
 		}
