@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		int run = scanner.nextInt();
+		String arrrun = "";
+		int[] count = new int[26];
+		int[] alphet = new int[26];
+
+		for (int i = 0; i < run; i++) {
+			arrrun += scanner.nextLine();
+		}
+		arrrun = arrrun.toUpperCase();
+		for (int i = 0; i < arrrun.length(); i++) {
+			if (arrrun.charAt(i) >= 'A' && arrrun.charAt(i) <= 'Z') {
+				count[arrrun.charAt(i) - 'A']++;
+			}
+
+			// if ((arrrun.charAt(i) >= 'A') && (arrrun.charAt(i) <=
+			// 'Z')&&(arrrun.charAt(j) >= 'A')&&(arrrun.charAt(j) >= 'Z') ) {//
+			// 在範圍內拿出我要的位置
+			// count[arrrun.charAt(i)-'A']++;
+			// if(count[arrrun.charAt(i)]>count[arrrun.charAt(j)])
+
+		}
+	}
+}

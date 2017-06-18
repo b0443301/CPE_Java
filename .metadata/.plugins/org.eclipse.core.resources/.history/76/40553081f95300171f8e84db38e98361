@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		int run = Integer.parseInt(scanner.nextLine());
+		String arrrun = "";
+		int[] count = new int[26];
+		char[] alphet = new char[26];
+
+		// read
+		for (int i = 0; i < run; i++) {
+			arrrun += scanner.nextLine();
+		}
+
+		// count
+		arrrun = arrrun.toUpperCase();
+		for (int i = 0; i < arrrun.length(); i++) {
+			if (arrrun.charAt(i) >= 'A' && arrrun.charAt(i) <= 'Z') {
+				count[arrrun.charAt(i) - 'A']++;
+			}
+		}
+		for (int i = 0; i < 26; i++) {
+			alphet[i] = (char) (i + 'A');
+		}
+
+		// sort
+		for (int i = 0; i < 26; i++) {
+			for (int j = i + 1; j < 26; j++) {
+				if (count[i] < count[j]) {
+					int temp = count[i];
+					count[i] = count[j];
+					count[j] = temp;
+
+					temp = alphet[i];
+					alphet[i] = alphet[j];
+					alphet[j] = (char) (temp);
+				} else if (count[i] == count[j] && alphet[i] > alphet[j]) {
+					int temp = count[i];
+					count[i] = count[j];
+					count[j] = temp;
+
+					temp = alphet[i];
+					alphet[i] = alphet[j];
+					alphet[j] = (char) (temp);
+				}
+			}
+		}
+
+		// output
+		for (int i = 0; i < 26; i++) {
+			if (count[i] == 1)
+				System.out.println(Character.toString(alphet[i]) + " " + count[i]);
+		}
+	}
+}

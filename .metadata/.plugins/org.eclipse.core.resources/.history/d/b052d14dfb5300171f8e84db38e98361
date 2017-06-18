@@ -1,0 +1,58 @@
+
+//用map的寫法,用linklist寫法
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		int run = Integer.parseInt(scanner.nextLine());// 讀到2/n也算一行(整行讀進來,避免接下來讀入會出錯)
+		String arrrun = "";
+		int[] count = new int[26];// 儲存讀到字母次數
+		char[] alphet = new char[26];// 儲存字母A~Z
+		// read
+		for (int i = 0; i < run; i++) {// 連續讀入測資arrrun
+			arrrun += scanner.nextLine();
+		}
+
+		// count
+		arrrun = arrrun.toUpperCase();
+		for (int i = 0; i < arrrun.length(); i++) {
+			if (arrrun.charAt(i) >= 'A' && arrrun.charAt(i) <= 'Z') {
+				count[arrrun.charAt(i) - 'A']++;
+			}
+		}
+		for (int i = 0; i < 26; i++) {
+			alphet[i] = (char) (i + 'A');
+		}
+
+		// sort
+		for (int i = 0; i < 26; i++) {
+			for (int j = i + 1; j < 26; j++) {
+				if (count[i] < count[j]) {
+					int temp = count[i];
+					count[i] = count[j];
+					count[j] = temp;
+
+					temp = alphet[i];
+					alphet[i] = alphet[j];
+					alphet[j] = (char) (temp);
+				} else if (count[i] == count[j] && alphet[i] > alphet[j]) {
+					int temp = count[i];
+					count[i] = count[j];
+					count[j] = temp;
+
+					temp = alphet[i];
+					alphet[i] = alphet[j];
+					alphet[j] = (char) (temp);
+				}
+			}
+		}
+
+		// output
+		for (int i = 0; i < 26; i++) {// 輸出
+			if (count[i] != 0)// 如果計算字母數字不為0時
+				System.out.println(Character.toString(alphet[i]) + " " + count[i]);// 輸出字母(正常轉型)和計算字母次數
+		}
+	}
+}
