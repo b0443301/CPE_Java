@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		while(true){
+		Scanner scanner = new Scanner(System.in);
+		String arrrun1 = scanner.nextLine();
+		String arrrun2 = scanner.nextLine();
+		
+		arrrun1 = arrrun1.toLowerCase();
+		arrrun2 = arrrun2.toLowerCase();
+		for(int i=0;i<arrrun1.length();i++){
+			for(int j=0;j<arrrun2.length();j++){
+				if(arrrun1(i)<arrrun2(j))
+				
+				
+				
+			}
+			
+			
+			
+		}
+		
+		
+		
+		
+		}
+
+	}
+}

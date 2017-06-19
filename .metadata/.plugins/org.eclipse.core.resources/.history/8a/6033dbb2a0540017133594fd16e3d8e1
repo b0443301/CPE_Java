@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String arg[]) {
+		String input = "";
+
+		String alphet = "123456789-=qwertyuiopasdfghjkl;'zxcvbnm,.//";
+		Scanner scanner = new Scanner(System.in);
+		input = scanner.nextLine();
+
+		// for (int i = 0; i < alphet.length(); i++) {
+		// input = scanner.nextLine();
+		// }
+		input = input.toLowerCase();
+		for (int i = 0; i < input.length(); i++) {
+			char temp = input.charAt(i);
+			for (int j = i; j < alphet.length(); j++) {
+				if (temp == alphet.charAt(j)) {
+					if (j < 2)
+						j += alphet.length();
+					System.out.print(input.charAt(j-2));
+				} // else {
+					// System.out.print(input.charAt(i));
+					// }
+			}
+			// for (int j = 0; j < alphet.length(); j++) {
+			// if (temp != 0) {
+			// temp =alphet+2;
+			//
+			// }
+		}
+
+	}
+}

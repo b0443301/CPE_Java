@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int[] count = new int[26];
+		char[] alphet = new char[26];
+		// while(true){
+		Scanner scanner = new Scanner(System.in);
+		String arrrun1 = scanner.nextLine();
+		String arrrun2 = scanner.nextLine();
+
+		for (int i = 0; i < 26; i++) {
+			count[arrrun1.charAt(i)]++;
+		}
+		for (int i = 0; i < 26; i++) {
+			{
+				count[arrrun2.charAt(i)]++;
+			}
+			if (arrrun1.charAt(i) == arrrun2.charAt(i) && count[arrrun1.charAt(i)] < count[arrrun2.charAt(i)]) {
+				System.out.println(arrrun1.charAt(i));
+			}
+
+		}
+	}
+}

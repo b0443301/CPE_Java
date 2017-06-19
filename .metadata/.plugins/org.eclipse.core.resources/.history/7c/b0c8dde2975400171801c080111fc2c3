@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main() {
+		// read
+		long input = 0;
+		Scanner scanner = new Scanner(System.in);
+		input = scanner.nextInt();
+		String[] arrinputInt = new String[200000];
+		String[] ChangInputString = new String[200000];
+		// cal
+
+	}
+}

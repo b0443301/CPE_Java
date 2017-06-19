@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		// read
+		int arrinputInt=0 ;
+		char[] ChangInputString=new char[11]  ;
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		// for (int i = 0; i < 20000000; i++) {
+		// arrinputInt = scanner.nextInt();
+		// }
+		// cal
+
+	}
+}

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String arg[]) {
+
+		String alphet = "`123456789-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./";
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.nextLine();
+		
+		input = input.toLowerCase();
+		for (int i = 0; i < input.length(); i++) {
+			char temp = input.charAt(i);
+			for (int j = 0; j < alphet.length(); j++) {
+				if (temp == alphet.charAt(j)) {
+					System.out.print(alphet.charAt(j - 2));
+					break;
+				} else if (temp == ' ') {
+					System.out.print(temp);
+					break;
+				}
+			}
+		}
+	}
+}

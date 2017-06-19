@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int[] count1 = new int[26];
+		int[] count2 = new int[26];
+
+		// while(true){
+		Scanner scanner = new Scanner(System.in);
+		String arrrun1 = scanner.nextLine();
+		String arrrun2 = scanner.nextLine();
+
+		for (int i = 0; i < arrrun1.length(); i++) {
+			count1[arrrun1.charAt(i) - 'a']++;
+		}
+		for (int i = 0; i < arrrun2.length(); i++) {
+			count2[arrrun2.charAt(i) - 'a']++;
+		}
+		for (int i = 0; i < 26; i++) {
+			if (arrrun1.charAt(i) == arrrun2.charAt(i)
+					&& count1[arrrun1.charAt(i) - 'a'] < count2[arrrun2.charAt(i) - 'a']) {
+				System.out.println(arrrun1.charAt(i));
+			}
+		}
+
+	}
+}
