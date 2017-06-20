@@ -1,0 +1,31 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int max = 0;
+		String input = "";
+		ArrayList<String> list = new ArrayList<String>();
+		Scanner scanner = new Scanner(System.in);
+
+		while (scanner.hasNextLine()) {
+			input = scanner.nextLine();
+			if (input.equals("0"))
+				break;
+			 list.add(input);
+		}
+		for(int i=list.size();i>0;i--){
+			//for(int j=0;j<list.size();j++){
+			
+			System.out.println(list.get(i));
+				
+			//}
+		}
+		
+
+//		for (String e : list) {
+//			System.out.println(e);
+//		}
+	}
+}

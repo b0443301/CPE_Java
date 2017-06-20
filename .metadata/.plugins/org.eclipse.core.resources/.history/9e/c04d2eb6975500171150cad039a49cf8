@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int[] month_day = { 30, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		String[] week = { "Monday", "Tuseday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+		Scanner scanner = new Scanner(System.in);
+		int run = scanner.nextInt();
+		for (int i = 0; i < run; i++) {
+			int month = scanner.nextInt();
+			int day = scanner.nextInt();
+
+		}
+	}
+}

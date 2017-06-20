@@ -1,0 +1,17 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+	public static void main() {
+		int max = 0;
+		String input = "";
+		ArrayList<String> list = new ArrayList<String>();
+		Scanner scanner = new Scanner(System.in);
+
+		while (scanner.hasNextLine()) {
+			list.add(input);
+		}
+
+	}
+}

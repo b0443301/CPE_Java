@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int run = 0;
+		int arrrun = 0;
+		int[] month_day={30,28,31,30,31,30,31,31,30,31,30,31F};
+		Scanner scanner = new Scanner(System.in);
+		run = scanner.nextInt();
+		for (int i = 0; i < run; i++) {
+			arrrun = scanner.nextInt();
+			//int month=0,day=0;
+			if(arrrun)
+		}
+		
+		
+		
+		
+		
+
+	}
+}

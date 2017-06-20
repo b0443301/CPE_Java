@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		int[] month_day = { 30, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		String[] week = { "Saturday", "Sunday", "Monday", "Tuseday", "Wednesday", "Thursday", "Friday" };
+
+		Scanner scanner = new Scanner(System.in);
+		int run = scanner.nextInt();
+		for (int i = 0; i < run; i++) {
+			int month = scanner.nextInt();
+			int day = scanner.nextInt();
+
+			for (int j = 0; j < month - 1; j++) {
+				day += month_day[j];
+			}
+
+			System.out.println(week[day % 7 - 1]);
+
+			// for (int j = 1; j < month; j++) {
+			// day += month_day[j - 1];
+			// }
+		}
+	}
+}

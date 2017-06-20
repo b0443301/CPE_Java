@@ -1,0 +1,45 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+//用Arraylist存資料
+public class main {
+	public static void main(String args[]) {
+		int max = 0;
+		ArrayList<String> list = new ArrayList<String>();
+		Scanner scanner = new Scanner(System.in);
+
+		while (scanner.hasNextLine()) {
+			String input = scanner.nextLine();
+			if (input.equals("0"))//電腦才有EFO
+				break;
+			list.add(input);
+		}
+		// for (int i = 0; i < list.size(); i++) {
+		// if (max < list.get(i).length()) {
+		// max = list.get(i).length();
+		// }
+		// }
+		for (String e : list) {
+			if (max < e.length()) {
+				max = e.length();
+			}
+		}
+		// for (int i = 0; i < list.size(); i++) {
+		//
+		// }
+		for (int i = 0; i < max; i++) {
+			for (int j = list.size() - 1; j >= 0; j--) {
+				if (list.get(j).length() - 1 < i) {
+					System.out.print(" ");
+				} else {
+					System.out.print(list.get(j).charAt(i));
+				}
+			}
+			System.out.print("\n");
+		}
+
+		// for (String e : list) {
+		// System.out.println(e);
+		// }
+	}
+}

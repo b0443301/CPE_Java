@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main() {
+		String[] run = new String[100];
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < run.length; i++) {
+			for (int j = i + 1; j < run.length; j++) {
+				run[i] = scanner.nextLine();
+
+			}
+		}
+
+	}
+}

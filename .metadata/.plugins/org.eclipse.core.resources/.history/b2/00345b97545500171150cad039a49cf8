@@ -1,0 +1,9 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String agrs[]) {
+		String input = "";
+		Scanner scanner = new Scanner(System.in);
+
+	}
+}

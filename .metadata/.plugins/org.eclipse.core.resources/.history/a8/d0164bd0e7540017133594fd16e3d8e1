@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main() {
+		String[] run = new String[100];
+		int max=0;
+		
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < run.length; i++) {
+			run[i] = scanner.nextLine();
+				if(i>max){
+					max=i;
+				}
+				
+			}
+		}
+
+	}
+}
+//for (int i = 0; i < run.length; i++) {
+//	for (int j = 0; j < run.length+1 ; j++) {
+//		run[j] = scanner.nextLine();
+//		if(j>0){
+//			
+//		}

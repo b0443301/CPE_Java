@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		// Boolean Flag = true;
+
+		while (scanner.hasNextLine()) {
+			String input = scanner.nextLine();
+			// if (input.equals("0")) {
+			// break;
+			// }
+			int count = 0;
+			for (int i = 0; i < input.length(); i++) {
+				
+				if (input != "\"" && input.charAt(i) > i) {
+
+					count++;
+					if (count % 2 == 1) {
+						System.out.print("``");
+					} else if (count % 2 == 0) {
+						System.out.print("''");
+					}
+					
+					
+					System.out.println(input);
+				}
+				
+				
+				
+			}
+		}
+	}
+}
+
+//
+// System.out.print(input);
+// } else if (input == "" && input.charAt(i) % 2 == 1) {
+// System.out.print("``");
+// } else {
+// System.out.print("''");
+// }

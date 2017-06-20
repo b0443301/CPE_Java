@@ -1,0 +1,19 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+	public static void main() {
+		String[] run = new String[100];
+		int max = 0;
+		 ArrayList list =new ArrayList();
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		
+		
+		}
+	}
+
+}}
