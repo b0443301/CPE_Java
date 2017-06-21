@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextInt()) {
+			Boolean isJolly = true;
+			ArrayList<Integer> input = new ArrayList<Integer>();
+			ArrayList<Integer> abs = new ArrayList<Integer>();
+			//ÅªÀÉ
+			int run = scanner.nextInt();
+			for (int i = 0; i < run; i++) {
+				input.add(scanner.nextInt());
+			}
+
+			for (int i = 0; i < input.size() - 1; i++) {
+				abs.add(Math.abs(input.get(i) - input.get(i + 1)));
+			}
+
+			Collections.sort(abs);
+			for (int i = 0; i < abs.size(); i++) {
+				if (abs.get(i) != i + 1) {
+					isJolly = false;
+					break;
+				}
+			}
+
+			if (isJolly) {
+				System.out.println("Jolly");
+			} else {
+				System.out.println("Not Jolly");
+			}
+		}
+	}
+}

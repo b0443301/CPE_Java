@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextInt()) {
+			Boolean isJolly = true;
+			ArrayList<Integer> input = new ArrayList<Integer>();
+			ArrayList<Integer> abs = new ArrayList<Integer>();
+			//讀檔
+			int run = scanner.nextInt();
+			for (int i = 0; i < run; i++) {
+				input.add(scanner.nextInt());
+			}
+			//計算
+			for (int i = 0; i < input.size() - 1; i++) {
+				abs.add(Math.abs(input.get(i) - input.get(i + 1)));
+			}
+			//檢查輸出
+			Collections.sort(abs);
+			for (int i = 0; i < abs.size(); i++) {
+				if (abs.get(i) != i + 1) {//只要有一個元素沒有排序EX: 1  2  3
+										  //			a[i]=a[0][1][2]
+					isJolly = false;
+					break;
+				}
+			}
+
+			if (isJolly) {
+				System.out.println("Jolly");
+			} else {
+				System.out.println("Not Jolly");
+			}
+		}
+	}
+}

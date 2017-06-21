@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+	public static void main(String agrs[]) {
+
+		ArrayList<Integer> set = new ArrayList<Integer>();
+		Scanner scanner = new Scanner(System.in);
+		int run = scanner.nextInt();
+		for (int i = 0; i < run; i++) {// while (scanner.hasNextLine())有何不同
+			int input = scanner.nextInt();
+//			if (input == 0)
+//				break;
+			set.add(input);
+			set.add  
+			//if(input.i-input.i+1>run){
+				
+			
+			
+		//}
+		
+		}
+
+	}
+}

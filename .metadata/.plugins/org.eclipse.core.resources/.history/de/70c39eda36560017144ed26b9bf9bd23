@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLine()) {
+			long firstdaystay = scanner.nextInt();
+			long selectdate = scanner.nextInt();
+			while (true) {
+				int countday = 0;
+				selectdate = ((firstdaystay + (firstdaystay + 1)) * countday) / 2;
+				countday++;
+				break;
+			}
+		}
+
+	}
+}

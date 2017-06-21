@@ -21,7 +21,7 @@ public class main {
 		}
 
 		for (Map.Entry<String, Integer> map : treeMap.entrySet()) {
-			System.out.println(String.valueOf(map.getKey()) + " " + String.valueOf(map.getValue()));//用map輸出,用String強轉型的方式回傳,因為java,c++的家法有多種功用,自己定義
+			System.out.println(String.valueOf(map.getKey()) + " " + String.valueOf(map.getValue()));//用map輸出,用String強轉型的方式回傳,因為java,c++的加法有多種功用,需要自己定義
 		}
 
 		scanner.close();//記憶體還給它

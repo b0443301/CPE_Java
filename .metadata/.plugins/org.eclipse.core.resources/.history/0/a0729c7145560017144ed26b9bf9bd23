@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLine()) {
+			long firstdaystay = scanner.nextInt();
+			long selectdate = scanner.nextInt();
+			long countdate=0;
+			while (true) {
+				firstdaystay++;
+				countdate=selectdate-firstdaystay;
+				
+				if(countdate<=0){
+					
+					System.out.print(firstdaystay);
+					break;
+				
+				}
+			}
+		}
+
+	}
+}

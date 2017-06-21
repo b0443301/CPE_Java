@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLine()) {
+			long firstdaystay = scanner.nextInt();
+			long selectdate = scanner.nextInt();
+
+			while (true) {
+				selectdate = selectdate - firstdaystay;//
+				if (selectdate <= 0) {
+					System.out.print(firstdaystay);
+					break;
+				}
+				firstdaystay++;
+			}
+		}
+	}
+}
+/*
+ 第一組測資
+EX:6-1=5
+EX:5-2=3
+EX:3-3=0
+
+
+
+
+
+
+*/
+
+
+

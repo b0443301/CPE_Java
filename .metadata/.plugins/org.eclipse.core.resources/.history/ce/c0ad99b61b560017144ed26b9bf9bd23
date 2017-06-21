@@ -1,0 +1,19 @@
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+
+public class main {
+	public static void main(String agrs[]) {
+
+		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
+		Scanner scanner = new Scanner(System.in);
+		int run = scanner.nextInt();
+		while (scanner.hasNextLine()) {
+			int input = scanner.nextInt();
+			if (input == 0)
+				break;
+			set.add(input);
+
+		}
+
+	}
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String agrs[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		int run = scanner.nextInt();
+		for (int i = 0; i < run; i++) {
+			int attendnumber = scanner.nextInt();
+			float probability = scanner.nextFloat();
+			int people = scanner.nextInt();
+
+		}
+		
+
+		// Scanner scanner = new Scanner(System.in);
+		// float num1 = scanner.nextFloat();
+		// float num2 = scanner.nextFloat();
+		// System.out.println(num1 * num2); // 0.1*0.1=0.010000001
+	}
+}

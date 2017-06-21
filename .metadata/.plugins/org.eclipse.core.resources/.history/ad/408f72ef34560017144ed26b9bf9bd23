@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		int run = scanner.nextInt();
+		while (scanner.hasNextLine()) {
+			for (int i = 0; i < run; i++) {
+				int firstdaystay = scanner.nextInt();
+				int selectdate = scanner.nextInt();
+
+			}
+
+		}
+	}
+}

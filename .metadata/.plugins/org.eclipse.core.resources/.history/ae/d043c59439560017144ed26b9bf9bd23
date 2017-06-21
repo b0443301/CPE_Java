@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLine()) {
+			long firstdaystay = scanner.nextInt();
+			long selectdate = scanner.nextInt();
+
+			while (true) {
+				int countday = 0;
+				long area = 0;
+				area = ((firstdaystay + (firstdaystay + countday)) * countday) / 2;
+				countday++;
+
+				if (area >= selectdate) {
+					System.out.println(firstdaystay + countday);
+					break;
+				}
+			}
+		}
+
+	}
+}

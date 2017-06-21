@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLine()) {
+			int x = Integer.parseInt(scanner.nextLine());
+			String a = scanner.nextLine();
+			String[] aSplit = a.split(" ");
+			int[] aArray = new int[aSplit.length];
+			for(String e:aSplit){
+				
+			}
+			
+			
+			
+			
+//			int sum=0;
+//			int run1Int=Integer.parseInt(run1);
+//			int run2Int=Integer.parseInt(String.valueOf(run2Split));
+//			for(int i=0;i<run2Split.length-1;i++){
+//				 sum+=run2Split*(Math.pow(run1Int, i));
+//			}
+			
+		}
+	}
+}
+//			for (int i = 0; i < run2Split.length; i++) {
+//				System.out.print(run2Split[i]);
+//			}

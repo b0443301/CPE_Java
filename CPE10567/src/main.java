@@ -9,10 +9,10 @@ public class main {
 			String arrrun1 = scanner.nextLine();
 			String arrrun2 = scanner.nextLine();
 
-			for (int i = 0; i < arrrun1.length(); i++) {// 計算第一個測資字母次數有哪些用for迴圈遍利
+			for (int i = 0; i < arrrun1.length(); i++) {// 計算第一個測資字母次數有哪些用for迴圈遍歷
 				count1[arrrun1.charAt(i) - 'a']++;// 找出a的偏移量算出對應a-->arrrun1[0],b--->arrrun1[1],c-->arrrun1[2]
 			}
-			for (int i = 0; i < arrrun2.length(); i++) {// 計算第二個測資字母次數有哪些用for迴圈遍利
+			for (int i = 0; i < arrrun2.length(); i++) {// 計算第二個測資字母次數有哪些用for迴圈遍歷
 				count2[arrrun2.charAt(i) - 'a']++;// 找出a的偏移量算出對應a-->arrrun2[0],b--->arrrun2[1],c-->arrrun2[2]
 			}
 			for (int i = 0; i < 26; i++) {// 比對兩組測資(a~z)26筆

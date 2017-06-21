@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLine()) {
+			long firstdaystay = scanner.nextInt();
+			long selectdate = scanner.nextInt();
+
+			while (true) {
+				selectdate = selectdate - firstdaystay;//
+				if (selectdate <= 0) {
+					System.out.print(firstdaystay);
+					break;
+				}
+				firstdaystay++;
+			}
+		}
+	}
+}
+/*
+ 第一組測資
+6-1=5
+5-2=3
+3-3=0
+ 第二組測資
+10-3=7
+7-4=3
+3-5=-2
+ 第三組測資
+ 14-3=11
+ 11-4=7
+ 7-5=2
+ 2-6=-4
+
+
+
+
+
+
+*/
+
+
+
