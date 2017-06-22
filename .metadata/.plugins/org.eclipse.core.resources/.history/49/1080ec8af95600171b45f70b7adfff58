@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String agrs[]) {
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextInt()) {
+			int v = scanner.nextInt();
+			int time = scanner.nextInt();
+			int ans = 2 * v * time;
+			if (v == 0 && time == 0) {
+				System.out.println("0");
+			}
+			System.out.println(ans);
+
+		}
+	}
+}

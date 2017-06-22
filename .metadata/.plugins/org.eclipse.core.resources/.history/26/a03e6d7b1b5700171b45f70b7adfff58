@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		int input = scanner.nextInt();
+		Boolean isSequence = true;
+		for (int i = 1; i < input; i++) {
+			int[] arrInput = new int[input];
+			for (int j = 0; j < input; j++) {
+				arrInput[j] = scanner.nextInt();
+				// if (arrInput[j] <= arrInput[j - 1]) {
+				// isSequence = false;
+				// }
+			}
+			for (int j = 0; j < input-1; j++) {
+				if (arrInput[j] > arrInput[j + 1]) {
+					isSequence = false;
+				}
+			}
+			int[] note = new int[10000];
+			if (isSequence) {
+				for (int k = 0; k < input; k++) {
+					for (int l = 0; l < input; l++) {
+						if (note[arrInput[k] + arrInput[l]] != note[arrInput[k + 1] + arrInput[l + 1]]) {
+							isSequence = false;
+						} else {
+							isSequence = true;
+						}
+
+					}
+
+				}
+				System.out.println("Case #" + i + " It is a B2-Sequence.");
+			} else {
+				System.out.println("Case #" + i + " It is not a B2-Sequence.");
+			}
+		}
+	}
+}
+// if (arrInput[j] > arrInput[j + 1]) {
+//
+// }

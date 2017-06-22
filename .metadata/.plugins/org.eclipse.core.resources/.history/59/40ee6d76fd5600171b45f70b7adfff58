@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		int input = scanner.nextInt();
+		int[] arrInput = new int[input];
+		for (int i = 0; i < input; i++) {
+			arrInput[i] = scanner.nextInt();
+		}
+	}
+}

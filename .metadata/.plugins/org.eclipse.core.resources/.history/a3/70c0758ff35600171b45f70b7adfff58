@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		int input = Integer.parseInt(scanner.nextLine());
+		for (int i = 1; i < input; i++) {
+			Boolean isMatrix = true;
+			// String[] matrix=new String[100];
+			String matrix = scanner.nextLine();
+			String[] matrixSplit = matrix.split(" ");
+			int matrixSize = Integer.parseInt(matrixSplit[2]);
+
+			int[][] matrixArray = new int[matrixSize][matrixSize];
+			for (int j = 0; j < matrixSize; j++) {
+				for (int k = 0; k < matrixSize; k++) {
+					matrixArray[j][k] = scanner.nextInt();
+				}
+			}
+			scanner.nextLine();// 把斜線n/n清除,因為電腦最後讀到1後面的/n
+
+			Loop1: for (int j = 0; j < matrixSize; j++) {
+				Loop2: for (int k = 0; k < matrixSize; k++) {//判斷只要有一個元素不相等,或兩者都小於0的話
+					if (matrixArray[j][k] != matrixArray[matrixSize - 1 - j][matrixSize - 1 - k]
+							|| matrixArray[j][k] < 0 || matrixArray[matrixSize - 1 - j][matrixSize - 1 - k] < 0) {
+						isMatrix = false;//把它記錄下來,不是迴圈
+						// isMatrix =
+											// !isMatrix;(反覆修改狀態機方式,狀態會改回來)
+						
+						// System.out.println("Test #" + i + "Non-:Symmertric");
+						break Loop1;
+					}
+				}
+			}
+
+			if (isMatrix) {
+				System.out.println("Test #" + i + ": Symmertric.");
+			} else {
+				System.out.println("Test #" + i + " Non-:Symmertric.");
+			}
+		}
+	}
+}

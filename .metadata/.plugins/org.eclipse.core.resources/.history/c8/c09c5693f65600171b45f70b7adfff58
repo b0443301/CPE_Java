@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String agrs[]) {
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNextLine()) {
+			int num1 = scanner.nextInt();
+			int num2 = scanner.nextInt();
+			if (num1 < 0 && num2 < 0) {
+				break;
+			}
+			int count = 0;
+			for (int i = num1; i < num2; i++) {
+				if (Math.pow(i, 2) == 0)
+					count++;
+			}
+
+		}
+	}
+}

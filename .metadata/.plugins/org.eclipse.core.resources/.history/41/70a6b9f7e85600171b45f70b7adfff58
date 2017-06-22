@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		int input = Integer.parseInt(scanner.nextLine());
+		// String[] matrix=new String[100];
+		String matrix = scanner.nextLine();
+		String[] matrixSplit = matrix.split(" ");
+		for (int i = 0; i < matrixSplit.length - 1; i++) {
+			System.out.print("N =" + matrixSplit[i]);
+
+		}
+		int[][] matrixArray = new int[matrixSplit.length][matrixSplit.length];
+		for (int i = 0; i < matrixSplit.length - 1; i++) {
+			for (int j = 0; j < matrixSplit.length - 1; j++) {
+				matrixArray[i][j] = Integer.parseInt(matrixSplit[i]);
+
+			}
+		}
+	}
+}

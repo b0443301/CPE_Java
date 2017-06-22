@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.nextLine();
+		String convert = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+		int[] arrconvert = new int[convert.length()];
+		for (int i = 0; i < input.length(); i++) {
+			arrconvert[i] = Integer.parseInt(input);// arrconvert[i] =
+													// scanner.nextInt();
+			System.out.println(arrconvert[i]);
+		}
+
+	}
+}

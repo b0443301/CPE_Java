@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class main {
+	public static void main(String args[]) {
+		Boolean isMatrix = true;
+		Scanner scanner = new Scanner(System.in);
+		int input = Integer.parseInt(scanner.nextLine());
+		// String[] matrix=new String[100];
+		String matrix = scanner.nextLine();
+		String[] matrixSplit = matrix.split(" ");
+		int matrixSize = Integer.parseInt(matrixSplit[2]);
+
+		int[][] matrixArray = new int[matrixSize][matrixSize];
+		for (int i = 0; i < matrixSize; i++) {
+			for (int j = 0; j < matrixSize; j++) {
+				matrixArray[i][j] = scanner.nextInt();
+			}
+		}
+		Loop1: for (int i = 0; i < matrixSize; i++) {
+			Loop2: for (int j = 0; j < matrixSize; j++) {
+				if (matrixArray[i][j] != matrixArray[matrixSize - 1 - i][matrixSize - 1 - j] || matrixArray[i][j] < 0
+						|| matrixArray[matrixSize - 1 - i][matrixSize - 1 - j] < 0) {
+					isMatrix = false;//isMatrix = !isMatrix;(反覆修改狀態機方式)
+					System.out.println("Test #" + i + ":Symmertric");
+					continue Loop1;
+				} 
+					
+					System.out.println("Test #" + i + "Non-:Symmertric");
+					break Loop2;
+				
+			}
+		}
+
+	}
+}
